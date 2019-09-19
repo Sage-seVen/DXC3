@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Dropdown demo </title>
+  </head>
+
+  <script type="text/javascript">
+ pehla=['one plus', 'samsung','apple'];
+ dusra=['6','6t','7'],['S10','Note 10'],['X','XR','XS'];
+
+ function firstgen() {
+   var dropcontrol= document.getElementById('First');
+   for (var i = 0; i <pehla.length; i++)
+   {
+     var optioncontrol=document.createElement('option');
+     optioncontrol.text =pehla[i];
+     dropcontrol.add(optioncontrol,i+1);
+   }
+ }
+
+ function secgen() {
+   var index=
+ }
+
+  </script>
+
+  <body onload="firstgen()">
+    <select id="First" class="" name="">
+      <option value=""> select first </option>
+    </select>
+
+    <select id="second" class="" name="">
+      <option value=""> select </option>
+    </select>
+
+
+  </body>
+</html>

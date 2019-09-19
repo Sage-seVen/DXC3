@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Day 3 task</title>
+
+    <script type="text/javascript">
+      var roll=[1,2,3,4,5,6,];
+      var stud=['virat','rohit','shikhar','rahul','dhoni','hardik'];
+      var College=['IIT','JNU','IISC'];
+
+      // document.write("script");
+       var tableData=[['virat','rohit','shikhar','rahul','dhoni','hardik'], [1,2,3,4,5,6,]];
+
+      function createTable() {
+        // var tableData=[[1,2,3,4,5,6,], ['virat','rohit','shikhar','rahul','dhoni','hardik'],['IIT','IIT',] ];
+        var table = document.createElement('table');
+        var tableBody = document.createElement('tbody');
+
+        tableData.forEach(function(rowData) {
+          var row = document.createElement('tr');
+
+          rowData.forEach(function(cellData) {
+            var cell = document.createElement('td');
+            cell.appendChild(document.createTextNode(cellData));
+            row.appendChild(cell);
+          });
+
+          tableBody.appendChild(row);
+        });
+
+        table.appendChild(tableBody);
+        document.body.appendChild(table);
+      }
+
+      // createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
+
+
+      function mytablegen() {
+        var a="<table>";
+        var c ="</table>";
+        var b="<tr>";
+        for (var i = 0; i <tableData.length; i++)
+         {
+          for (var j = 0; j < tableData[i].length; j++)
+           {
+             b+="<td>"+tableData[i][j]+"</td>";
+           }
+           b+="</tr><tr>";
+         }
+          var final =a+b+c;
+          console.log(final);
+          document.write("xyz");
+}
+
+
+
+      // (function () {
+      //   var s= prompt("enter value");
+      //   for (var i = 1; i <= 10; i++) {
+      //       console.log((i*s));
+      //       }
+      //
+      // })();
+
+
+    </script>
+
+    <style media="screen">
+    table.darkTable {
+            font-family: "Arial Black", Gadget, sans-serif;
+            border: 2px solid #000000;
+            background-color: #4A4A4A;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            border-collapse: collapse;
+            }
+            table.darkTable td, table.darkTable th {
+            border: 1px solid #4A4A4A;
+            padding: 3px 2px;
+            }
+            table.darkTable tbody td {
+            font-size: 13px;
+            color: #E6E6E6;
+            }
+            table.darkTable tr:nth-child(even) {
+            background: #888888;
+            }
+            table.darkTable thead {
+            background: #000000;
+            border-bottom: 3px solid #000000;
+            }
+            table.darkTable thead th {
+            font-size: 15px;
+            font-weight: bold;
+            color: #E6E6E6;
+            text-align: center;
+            border-left: 2px solid #4A4A4A;
+            }
+            table.darkTable thead th:first-child {
+            border-left: none;
+            }
+
+            table.darkTable tfoot {
+            font-size: 12px;
+            font-weight: bold;
+            color: #E6E6E6;
+            background: #000000;
+            background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+            background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+            background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+            border-top: 1px solid #4A4A4A;
+            }
+            table.darkTable tfoot td {
+            font-size: 12px;
+            }
+    </style>
+  </head>
+
+  <body>
+  <table class="darkTable">
+    <tr>
+    <th id="roll">Roll no.</th>
+    <th>Student Name</th>
+    <th>College Name</th>
+    <th>Marks</th>
+    <th>Sem</th>
+    </tr>
+
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th colspan="3">NA</th>
+    </tr>
+  </table>
+<br><br>
+  <table class="darkTable">
+    <tr>
+    <th id="roll">Roll no.</th>
+    <th>Student Name</th>
+    <th>College Name</th>
+    <th>Marks</th>
+    <th>Sem</th>
+    </tr>
+
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th rowspan="2">IIT</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <th>virat</th>
+      <th>100</th>
+      <th>8</th>
+    </tr>
+  </table>
+  <script type="text/javascript">
+  mytablegen();
+  function mytablegen() {
+    var a="<table>";
+    var c ="</table>";
+    var b="<tr>";
+    for (var i = 0; i <tableData.length; i++)
+     {
+      for (var j = 0; j < tableData[i].length; j++)
+       {
+         b+="<td>"+tableData[i][j]+"</td>";
+       }
+       b+="</tr><tr>";
+     }
+      var final =a+b+c;
+      console.log(final);
+      document.write(final);
+}
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+          <link href="./CustomStyles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script type="text/javascript">
+
+
+      function validation() {
+        var s= document.getElementById('passw').value;
+        console.log(s);
+        var cflag=false;
+        var sflag=false;
+        if(s.length<6)
+          alert('Password must be greater than 6 char');
+
+        for(var i=0;i<s.length;i++)
+        {
+            if(s.charCodeAt(i)>=65 && s.charCodeAt(i)<=90)
+               cflag=true;
+            if(s.charCodeAt(i)>=32 && s.charCodeAt(i)<=47 || s.charCodeAt(i)>=58 && s.charCodeAt(i)<=64 || s.charCodeAt(i)>=91 && s.charCodeAt(i)<=96 || s.charCodeAt(i)>=123 && s.charCodeAt(i)<=126)
+                sflag=true;
+        }
+console.log(cflag);
+console.log(sflag);
+        if (cflag==false)
+         alert("Password must have Caps");
+
+        if (sflag==false){
+         alert("Password must hav Special Chars");}
+      }
+
+
+    </script>
+</head>
+
+    <style>
+        img{
+            min-height:350px;
+        }
+
+              input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+              }
+
+              input[type=password], select {
+                      width: 100%;
+                      padding: 12px 20px;
+                      margin: 8px 0;
+                      display: inline-block;
+                      border: 1px solid #ccc;
+                      border-radius: 4px;
+                      box-sizing: border-box;
+                    }
+
+              input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+
+              input[type=submit]:hover {
+                background-color: #45a049;
+              }
+
+              div {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+              }
+    </style>
+
+<body>
+    <div class="container">
+    <div class="row">
+            <div class="col-lg-12">
+                <h1 align="center" style="color:green;"> DXC LOGIN SYSTEM </h1>
+            </div>
+
+            <div class="col-lg-12">
+                    <img src="Images/img1.jpeg" class="img-responsive  img-circle  center" />
+            </div>
+
+            <div class="col-lg-12">
+
+              <!-- <form class="" action="index.html" method="post"> -->
+                <input type="text" name="" value="" placeholder="Username"><br><br>
+                <input type="password" id="passw" name="" value="" placeholder="password">
+                <input type="submit" onclick="validation()" name="" value="Submit">
+
+            </div>
+    </div>
+    </div>
+</body>
+
+</html>

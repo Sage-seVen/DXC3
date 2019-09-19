@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Task for Day 2 </title>
+
+    <script type="text/javascript">
+      // alert("function working");
+
+      function caps(e)
+      {
+        // alert(e.which);
+            if(!(e.which>=65 && e.which<=90))
+              {
+              e.preventDefault();
+              }
+      }
+      function alpha(e)
+      {
+            if(!((e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=122)))
+              {
+              e.preventDefault();
+              }
+      }
+
+      function hover() {
+        document.getElementById('move').style.cursor="Crosshair";
+      }
+
+      function poof() {
+        document.getElementById('img').style.display="none";
+      }
+
+      function showCoords(event) {
+          var x = event.clientX;
+          var y = event.clientY;
+          var coords = "X coords: " + x + ", Y coords: " + y;
+          document.getElementById("mus").innerHTML = coords;
+        }
+
+        function direct() {
+          window.open("https://www.youtube.com/");
+        }
+
+        function pop() {
+          // alert("popped");
+          window.prompt("popped");
+        }
+
+        function dollaras() {
+            var dollars = prompt("Please enter dollars",);
+            var rupya= dollars*70;
+            if (dollars != null) {
+                document.getElementById("drs").innerHTML =
+                "you have itna rupya " + rupya ;
+              }
+        }
+
+        function concat() {
+          var fn= document.getElementById('fn').value;
+          var ln =document.getElementById('ln').value;
+          window.prompt(fn+ln);
+        }
+
+    </script>
+  </head>
+  <body background="4.jpg" style="background-size:cover">
+    Hello Fockers
+    <br><br>
+    <input type="text" onkeypress="caps(event)"  name="" value="" placeholder="Only caps"><br><br>
+    <input type="text" onkeypress="alpha(event)" name="" value="" placeholder="Only alphabets"><br><br>
+    <p onmouseover="hover()" id="move"> <b> DONT MOVE HERE</b> </p> <br><br>
+    <img src="index.png" alt="Smiley face" height="100" width="100" onclick="poof()" id="img"><br>
+    <input type="text" onmousemove="showCoords(event)" height="77" width="77" name="" value="" >
+    <p id="mus"> </p>
+
+    <h3 onclick="direct()" id>Click kro!!</h3>
+    <p onclick="pop()"> pop kro </p>
+
+    <!-- <form class="" method="post"> -->
+      <input type="text" id="fn" name="" value="">
+      <input type="text" id="ln" name="" value="">
+      <input type="submit" onclick="concat()" name="" value="concat">
+    <!-- </form> -->
+
+    <button onclick="dollaras()"> Convert it</button>
+    <p id="drs"> </p>
+  </body>
+</html>

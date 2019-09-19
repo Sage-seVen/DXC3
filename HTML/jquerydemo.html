@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+ -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+/*$(function () {
+alert('hello world');
+});*/
+
+/*$(function(){
+ $("#xyz").keypress(
+  function(){
+  alert('hello')
+  })
+  })
+*/
+
+/*
+$(function(){
+ $(".test").click(
+  function(){
+  alert('hello')
+  })
+  })
+*/
+
+
+
+// $(function(){
+//  $(".test").click(
+//  function(){
+//   $("html").hide()
+//   })
+// })
+
+$(function adder() {
+  $(".test").click(
+  function () {
+    $("#list").append('<li>' + $(xyz).val() +'</li>');
+  }
+  )
+})
+
+
+
+</script>
+
+</head>
+<body>
+<input type="text" id="xyz">
+<input type="submit" class="test" >
+<p>Dont click me</p>
+<ol id="list">
+</ol>
+</body>
+</html>
