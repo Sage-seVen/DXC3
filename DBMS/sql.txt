@@ -1,0 +1,59 @@
+create table depart
+(
+deptid int primary key,
+deptName varchar(20) check(deptName in ('sales','marketing'))
+)
+
+create table emp
+(
+empID int primary key,
+empNAME varchar(20),
+age int check(age between 18 and 50),
+deptID int,
+constraint fk foreign key(deptID) references depart(deptid)
+)
+
+----------trigger -------
+
+create table empBackup
+(
+empID int primary key,
+empNAME varchar(20),
+age int ,
+deptID int
+)
+
+create or replace trigger emptrg
+after insert
+on emp
+for each row
+begin
+insert into empBackup values(:new.empid,:new.empname,:new.age,:new.deptid);
+end;
+
+insert into depart values(1 ,'sales');
+insert into emp values(1,'Sahil',23,1);
+
+select * from empbackup;
+select * from emp;
+select * from empbin;
+
+insert into emp values(2,'Aryaman',23,1);
+
+create table empBin
+(
+empID int primary key,
+empNAME varchar(20),
+age int ,
+deptID int
+)
+
+create or replace trigger deltrg
+before delete
+on emp
+for each row
+begin
+insert into empBin values(:old.empid,:old.empname,:old.age,:old.deptid);
+end;
+
+DELETE FROM emp where empid=2;
