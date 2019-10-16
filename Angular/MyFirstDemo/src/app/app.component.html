@@ -1,0 +1,64 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Select your jagah: </h2>
+
+<select>
+  <option *ngFor="let ref of State">
+    {{ref}}
+  </option> 
+</select>
+
+<select>
+  <option *ngFor="let ref of City">
+    {{ref[0]}}
+  </option> 
+</select>
+<router-outlet></router-outlet>
+
+
+<h1>
+
+  
+  {{childMsg}}
+  
+  <input type="text" [(ngModel)]="msgToChild" placeholder="goes to child">
+
+  <input type="submit" value="parent" (click)="sendChild()">
+  
+
+  <input type="number" [(ngModel)]="a" >
+  <input type="number" [(ngModel)]="b">
+  <input type="submit" (click)="add()">
+  {{tot}}
+
+  <app-footer [xyz]="msg" (evnChild)="childMsg=$event"  [xyz1]="tot" [det1]=pobj ></app-footer>
+</h1>
+
+<h1>Object Printing</h1>
+<!-- <input type="text" placeholder="Enter Player name"  [(ngModel)]=this.pobj.pname> this dynamically assigns value, we need on clcik-->
+<input type="text" placeholder="Enter Player name"  [(ngModel)]=name>
+{{pobj.pname}}
+<br>
+<input type="text" placeholder="Enter Player id"  [(ngModel)]=id>
+{{pobj.pid}}
+<br>
+<input type="text" placeholder="Enter Player age"  [(ngModel)]=age>
+{{pobj.page}}
+<br>
+<input type="text" placeholder="Enter Player number"  [(ngModel)]=no ngModel="list">
+
+<div *ngIf="vision" >
+    <input type="text" placeholder="Enter alt number"  >
+</div>
+
+<div *ngIf="vision1" >
+    <input type="text" placeholder="Enter alt number 2"  >
+</div>
+
+<input type="submit" value="add ph" (click)=change()>
+<input type="submit" (click)=details()>

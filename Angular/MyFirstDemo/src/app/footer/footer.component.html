@@ -1,0 +1,19 @@
+<p>
+  Child footer works! {{uname}}
+
+  <input type="text" [(ngModel)]="msgToParent" placeholder="goes to parent">
+  <input type="submit" (click)="sendMsg()">
+
+  {{ref}}
+
+<br>
+  Player Name: {{chdet1.pname}}
+  Player ID: {{chdet1.pid}}
+  Player Age: {{chdet1.page}}
+  
+  
+</p>
+
+<div *ngFor="let i of chdet1.pno , let j=index">
+  Player phone {{j+1}}: {{i}}
+</div>

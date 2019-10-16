@@ -12,8 +12,8 @@
 
     <!-- Main css -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendor/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+	<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/main.js"></script> --%>
 </head>
 <body background="${pageContext.request.contextPath}/resources/images/form-img.jpg">
 
@@ -29,8 +29,12 @@
                             <label for="name" class="form-label">Name of Title</label>
                         </div>
                         <div class="form-group form-input">
-                            <input type="text" name="publisher" id="phone" value="" required />
+                            <input type="text" name="publisher"  value="" required />
                             <label for="phone" class="form-label">Title Publisher</label>
+                        </div>
+                        <div class="form-group form-input">
+                            <input type="text" name="rating"  value="" required />
+                            <label for="phone" class="form-label">Title IGN rating</label>
                         </div>
                         <div class="form-group">
                             <div class="select-list">
@@ -41,7 +45,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-radio">
+                        <!-- <div class="form-radio">
                             <label class="label-radio"> Rating </label>
                             <div class="radio-item-list">
                                 <span class="radio-item">
@@ -66,11 +70,25 @@
                                 </span>
                             </div>
                         </div>
-
+ -->
                         <div class="form-submit">
                             <input type="submit" value="Save Data" class="submit" id="submit"  /> 
-                            <input type="submit" value="View Data" class="submit" id="submit"  formaction="viewdata" />
                         </div>
+                        <div class="form-submit">
+                            <input type="submit" value="View Database" class="submit" id="submit"  formaction="viewdata" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Search in Database" class="submit" id="submit"  formaction="viewdataid" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Update in Database" class="submit" id="submit"  formaction="updateid" />
+                        </div>
+                        
+                        <div class="form-submit">
+                            <input type="submit" value="Delete from Database" class="submit" id="submit"  formaction="deleteid" />
+                        </div>
+                        
+                        
                     </form>
                 </div>
             </div>

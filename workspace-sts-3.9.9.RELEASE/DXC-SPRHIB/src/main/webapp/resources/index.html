@@ -1,94 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
-
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+	<title>Contact V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
 
-    <div class="main">
+	<div class="bg-contact3" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+				<form class="contact3-form validate-form">
+					<span class="contact3-form-title">
+						Contact Us
+					</span>
 
-        <div class="container">
-            <div class="booking-content">
-                <div class="booking-image">
-                    <img class="booking-img" src="images/form-img.jpg" alt="Booking Image">
-                </div>
-                <div class="booking-form">
-                    <form id="booking-form">
-                        <h2>Booking place for your dinner!</h2>
-                        <div class="form-group form-input">
-                            <input type="text" name="name" id="name" value="" required/>
-                            <label for="name" class="form-label">Your name</label>
-                        </div>
-                        <div class="form-group form-input">
-                            <input type="number" name="phone" id="phone" value="" required />
-                            <label for="phone" class="form-label">Your phone number</label>
-                        </div>
-                        <div class="form-group">
-                            <div class="select-list">
-                                <select name="time" id="time" required>
-                                    <option value="">Time</option>
-                                    <option value="6pm">6:00 PM</option>
-                                    <option value="7pm">7:00 PM</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="select-list">
-                                <select name="food" id="food" required>
-                                    <option value="">Food</option>
-                                    <option value="seasonalfish">Seasonal steamed fish</option>
-                                    <option value="assortedmushrooms">Assorted mushrooms</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-radio">
-                            <label class="label-radio"> Select Your Dining Space</label>
-                            <div class="radio-item-list">
-                                <span class="radio-item">
-                                    <input type="radio" name="number_people" value="2" id="number_people_2" />
-                                    <label for="number_people_2">2</label>
-                                </span>
-                                <span class="radio-item active">
-                                    <input type="radio" name="number_people" value="4" id="number_people_4" checked="checked" />
-                                    <label for="number_people_4">4</label>
-                                </span>
-                                <span class="radio-item">
-                                    <input type="radio" name="number_people" value="6" id="number_people_6" />
-                                    <label for="number_people_6">6</label>
-                                </span>
-                                <span class="radio-item">
-                                    <input type="radio" name="number_people" value="8" id="number_people_8" />
-                                    <label for="number_people_8">8</label>
-                                </span>
-                                <span class="radio-item">
-                                    <input type="radio" name="number_people" value="10" id="number_people_10" />
-                                    <label for="number_people_10">10</label>
-                                </span>
-                            </div>
-                        </div>
+					<div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio m-r-42">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
+							<label class="label-radio3" for="radio1">
+								Say Hi
+							</label>
+						</div>
 
-                        <div class="form-submit">
-                            <input type="submit" value="Book now" class="submit" id="submit" name="submit" />
-                            <a href="#" class="vertify-booking">Verify your booking info from your phone</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote">
+							<label class="label-radio3" for="radio2">
+								Get a Quote
+							</label>
+						</div>
+					</div>
 
-    </div>
+					<div class="wrap-input3 validate-input" data-validate="Name is required">
+						<input class="input3" type="text" name="name" placeholder="Your Name">
+						<span class="focus-input3"></span>
+					</div>
 
-    <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+					<div class="wrap-input3 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input3" type="text" name="email" placeholder="Your Email">
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="service">
+								<option>Needed Services</option>
+								<option>eCommerce Bussiness</option>
+								<option>UI/UX Design</option>
+								<option>Online Services</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3-select">
+						<div>
+							<select class="selection-2" name="budget">
+								<option>Budget</option>
+								<option>1500 $</option>
+								<option>2000 $</option>
+								<option>3000 $</option>
+							</select>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 validate-input" data-validate = "Message is required">
+						<textarea class="input3" name="message" placeholder="Your Message"></textarea>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
 </html>

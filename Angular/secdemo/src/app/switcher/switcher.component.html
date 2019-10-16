@@ -1,0 +1,54 @@
+<h1>
+
+  <input type="number" [(ngModel)]="x">
+  {{testVal}}
+  <input type="submit" (click)="changer()">
+  <div *ngIf="testVal>90; else elseBlock">
+    <p style="background-color:green;">Grade A+</p>
+  </div>
+  
+  <ng-template  #elseBlock>
+      
+    <ng-container *ngIf="testVal>=80 && testVal<=90 ;else else2">
+      <p style="background-color:blue;">Grade A</p>  
+    </ng-container>
+    
+    </ng-template>
+  
+    <ng-template  #else2>
+      
+      <ng-container *ngIf="testVal>=70 && testVal<=79 ;else else3">
+        <p style="background-color:lightblue;">Grade B</p>  
+      </ng-container>
+      
+      </ng-template>
+  
+      <ng-template  #else3>
+      
+        <ng-container *ngIf="testVal>=60 && testVal<=69 ;else else4">
+          <p style="background-color:yellow;">Grade C</p>  
+        </ng-container>
+        
+        </ng-template>
+        <ng-template  #else4>
+      
+          <ng-container *ngIf="testVal>=50 ;else else5">
+            <p style="background-color:chartreuse;">Grade D</p>  
+          </ng-container>
+          
+          </ng-template>
+  
+          <ng-template  #else5>
+      
+            
+              <p style="background-color:red;">Fail</p>  
+            
+            
+            </ng-template>
+  
+
+</h1>
+
+<p>
+  switcher works!
+</p>
