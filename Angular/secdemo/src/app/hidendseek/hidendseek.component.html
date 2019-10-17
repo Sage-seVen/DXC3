@@ -1,0 +1,24 @@
+<p>
+  hidendseek works!
+</p>
+<input type="text" [(ngModel)]="d" (keydown.enter)="dis()" > <input type="submit" (click)="dis()" >
+{{dref}}
+<hr>
+<input type="submit" value={{temp}} (click)="hide()">
+<div *ngIf="vis">
+<table border="1">
+  <tr>
+  <td> Author Id </td>
+  <td>  Name </td>
+  <td> Gender </td>
+  <td>Marital Status</td>
+  </tr>
+  
+  <tr *ngFor="let i of author">
+      <td> {{i.authorId}} </td>
+      <td> {{i.authorName}} </td>
+      <td> {{i.authorGender}} </td>
+      <td>{{i.marital}}</td>
+  </tr>
+</table>
+</div>

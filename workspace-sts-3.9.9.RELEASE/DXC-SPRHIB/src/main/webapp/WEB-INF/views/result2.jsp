@@ -25,7 +25,7 @@
 <h1>
 Hello Backend! 
 </h1></br>
-<h3>1 Entry found matching Title name - "${ref1.name }"</h3>
+<h3>Entries found matching Title name - "${ref1.name }"</h3>
 
 <div class="bg-contact3" style="background-image: url('${pageContext.request.contextPath}/resources/images/bg-01.jpg');">
 		<div class="container-contact3">

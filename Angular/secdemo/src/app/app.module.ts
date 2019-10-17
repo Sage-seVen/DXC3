@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SwitcherComponent } from './switcher/switcher.component';
 import {FormsModule} from '@angular/forms';
+import { HidendseekComponent } from './hidendseek/hidendseek.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SwitcherComponent
+    SwitcherComponent,
+    HidendseekComponent
   ],
   imports: [
     BrowserModule,

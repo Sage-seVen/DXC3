@@ -1,5 +1,6 @@
 package com.mysprhib.demos.dao;
 
+import java.io.Console;
 import java.util.ArrayList;
 
 import javax.transaction.Transactional;
@@ -52,8 +53,14 @@ public class GameDao {
 	@Transactional
 	 public void deleteGamesbyid(String id)
 	{ 
-		Session session=sessionFactory.getCurrentSession(); 
-		Games game=(Games)session.get(Games.class, id);
-		session.delete(game);
+		try {
+			Session session=sessionFactory.getCurrentSession(); 
+			Games game=(Games)session.get(Games.class, id);
+			session.delete(game);
+			}
+			catch (Exception e) {
+				System.out.println("Error, data not found");;
+			}
+		
 	 }
 }

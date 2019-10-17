@@ -42,6 +42,7 @@ export class AppComponent {
   no;
 
     details(){
+    
     this.pobj.pname=this.name;
     this.pobj.pid=this.id;
     this.pobj.page=this.age;
@@ -52,5 +53,21 @@ export class AppComponent {
     if (this.vision==false)
     this.vision=true;
     else this.vision1=true;
+  }
+
+
+  author:any[];
+
+  
+  
+  constructor()
+  {
+    this.author=
+    [
+    {authorId:1,authorName:'raj',authorGender:'male',marital:'Single'},
+    {authorId:2,authorName:'rajeev',authorGender:'male',marital:'Married'},
+    {authorId:3,authorName:'rajeshwari',authorGender:'female',marital:'Married'},
+    {authorId:4,authorName:'rajni',authorGender:'female',marital:'Single'}
+    ]
   }
 }

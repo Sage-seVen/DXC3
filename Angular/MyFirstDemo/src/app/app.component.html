@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -18,12 +18,10 @@
     {{ref[0]}}
   </option> 
 </select>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
 
 <h1>
-
-  
   {{childMsg}}
   
   <input type="text" [(ngModel)]="msgToChild" placeholder="goes to child">
@@ -38,6 +36,7 @@
 
   <app-footer [xyz]="msg" (evnChild)="childMsg=$event"  [xyz1]="tot" [det1]=pobj ></app-footer>
 </h1>
+
 
 <h1>Object Printing</h1>
 <!-- <input type="text" placeholder="Enter Player name"  [(ngModel)]=this.pobj.pname> this dynamically assigns value, we need on clcik-->
@@ -62,3 +61,24 @@
 
 <input type="submit" value="add ph" (click)=change()>
 <input type="submit" (click)=details()>
+
+<hr>
+
+
+
+<table border="1">
+  <tr>
+  <td> Author Id </td>
+  <td>  Name </td>
+  <td> Gender </td>
+  <td>Marital Status</td>
+  </tr>
+  
+  <tr *ngFor="let i of author">
+      <td> {{i.authorId}} </td>
+      <td> {{i.authorName| mstatu:i.authorGender:i.marital}} </td>
+      <td> {{i.authorGender}} </td>
+      <td>{{i.marital}}</td>
+  </tr>
+
+</table>

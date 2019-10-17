@@ -20,6 +20,20 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/util.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 <!--===============================================================================================-->
+
+ <script type="text/javascript">
+	function save(){
+		alert("Data Saved");
+	}
+	
+	function updated(){
+		alert("Data Updated");
+	}
+	
+	function deleted(){
+		alert("Data Deleted");
+	}
+</script>
 </head>
 <body>
 
@@ -35,14 +49,14 @@
 						<div class="contact3-form-radio m-r-42">
 							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
 							<label class="label-radio3" for="radio1">
-								View
+								By Id
 							</label>
 						</div>
 
 						<div class="contact3-form-radio">
 							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote">
 							<label class="label-radio3" for="radio2">
-								Create
+								Create Id
 							</label>
 						</div>
 						
@@ -113,7 +127,7 @@
 
 
 					<div class=" input3-select container-contact3-form-btn">
-						<button class="contact3-form-btn" formaction="savedata">
+						<button class="contact3-form-btn" formaction="savedata" onclick="save()">
 							Save
 						</button>
 					</div>
@@ -124,7 +138,7 @@
 					</div>
 					
 					<div class=" input3-select container-contact3-form-btn">
-						<button class="contact3-form-btn" formaction="updateid">
+						<button class="contact3-form-btn" formaction="updateid" onclick="updated()">
 							Update
 						</button>
 	
@@ -132,7 +146,7 @@
 					</div>
 					
 					<div class="container-contact3-form-btn">
-						<button class="contact3-form-btn" formaction="deleteid">
+						<button class="contact3-form-btn" formaction="deleteid" onclick="deleted()">
 							Delete
 						</button>
 					</div>
