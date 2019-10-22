@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Player } from './player.model';
+import { NewservService } from './newserv.service';
 
 @Component({
   selector: 'app-root',
@@ -60,8 +61,12 @@ export class AppComponent {
 
   
   
-  constructor()
+  constructor(private xyz:Player)
   {
+
+    //xyz.testMeth();
+
+    xyz.xyzMeth();
     this.author=
     [
     {authorId:1,authorName:'raj',authorGender:'male',marital:'Single'},

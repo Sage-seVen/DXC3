@@ -3,4 +3,8 @@ pname;
 pid;
 page;
 pno :string[];
+
+xyzMeth(){
+    console.log('test');
+}
 }
